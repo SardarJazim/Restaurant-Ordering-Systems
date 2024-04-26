@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Ordering System - Cart</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="top-banner">
+        <h1><a href="#">FOS</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cart Items -->
+    <section class="cart-items">
+        <h2>Your Cart</h2>
+        <div class="cart-list">
+            {% for item in cart_items %}
+            <div class="cart-item">
+                <h3>{{ item.name }}</h3>
+                <p>{{ item.description }}</p>
+                <p>Price: ${{ item.price }}</p>
+                <p>Quantity: {{ item.quantity }}</p>
+                <!-- Remove from cart button -->
+                <form action="/remove_from_cart/{{ item.id }}" method="post">
+                    <button type="submit">Remove from Cart</button>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- Total Price -->
+        <div class="total-price">
+            <h3>Total Price: ${{ total_price }}</h3>
+            <!-- Checkout button -->
+            <button>Checkout</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <div id="aboutSection" class="about-section">
+        <h2>About Us</h2>
+        <p>At FOS (Food Ordering System), we're passionate about delivering an exceptional dining experience to our customers.</p>
+        <p>With a vision to provide delicious, high-quality meals with unparalleled convenience, we strive to exceed expectations with every order.</p>
+        <p>For Contact:</p>
+        <!-- Social media icons -->
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <!-- End Banner -->
+    <footer class="end-banner">
+        <p>@RESTAURANT ORDERING SYSTEM 2024</p>
+    </footer>
+</body>
+</html>

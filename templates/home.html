@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Ordering System - Home</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <header class="top-banner">
+    <h1><a href="#">FOS</a></h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Opening Image with Quote -->
+    <section class="opening-section">
+        <!-- Background image and quote -->
+        <div class="opening-content">
+            <p>Taste Defines The Quality</p>
+        </div>
+    </section>
+
+
+
+    <!-- Menu Items -->
+    <section class="menu-items">
+        <h2>Menu</h2>
+        <div class="menu-list">
+            {% for item in menu_items %}
+        <div class="menu-item">
+            <div class="item-image">
+                <img src="{{ item.image_url }}" alt="{{ item.name }}">
+            </div>
+            <div class="item-details">
+                <h3>{{ item.name }}</h3>
+                <p>{{ item.description }}</p>
+                <p>Price: ${{ item.price }}</p>
+                <!-- Add to cart button -->
+                <form action="/add_to_cart/{{ item.id }}" method="post">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+          {% endfor %}
+        </div>
+    </section>
+
+
+
+    <!-- About Section -->
+    <div id="aboutSection" class="about-section">
+        <h2>About Us</h2>
+        <p>At FOS (Food Ordering System), we're passionate about delivering an exceptional dining experience to our customers. </p>
+        <p>with a vision to provide delicious, high-quality meals with unparalleled convenience, we strive to exceed expectations with every order.</p> 
+        <p> For Contact:</p>
+        <!-- Social media icons -->
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <!-- End Banner -->
+    <footer class="end-banner">
+        <p>@RESTAURANT ORDERING SYSTEM 2024</p>
+    </footer>
+
+    <script>
+        function scrollToAbout() {
+            var aboutSection = document.getElementById("aboutSection");
+            aboutSection.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>

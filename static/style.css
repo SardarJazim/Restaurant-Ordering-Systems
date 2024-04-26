@@ -1,0 +1,241 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: rgb(112, 111, 111);
+    padding: 0;
+}
+
+
+.top-banner {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-banner nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.top-banner nav li {
+    margin-right: 20px;
+}
+.top-banner h1 a {
+    color: white;
+}
+
+.top-banner nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s;
+    padding: 8px 12px; 
+    border-radius: 4px; 
+}
+
+.top-banner nav a:hover {
+    background-color: #333;
+    color: white;
+}
+
+.opening-section {
+    height: 900px; 
+    background-image: url('burger.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+.opening-section .opening-content {
+    text-align: left; /* Align the text to the left */
+    font-size: 50px; /* Adjust the font size */
+    color: rgb(2, 1, 1); /* Change the text color */
+    margin-left: 20px; /* Add margin to move the text to the left */
+    font-style: italic; /* Make the text italic */
+}
+
+
+.food-items {
+    padding: 20px;
+}
+
+.food-items table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.food-items th, .food-items td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.end-banner {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.about-section {
+    background-color: rgb(77, 76, 76);
+    padding: 20px;
+}
+.about-section p {
+   text-align: center;
+   color: white;
+}
+
+.about-section h2 {
+    color: darkblue;
+}
+
+.social-icons {
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 24px;
+    margin-right: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #000000;
+     /* Change color on hover */
+}
+
+
+
+/*login page styling*/
+.login_page {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 160px;
+    margin-bottom: 200px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login_page h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login_page label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.login_page input[type="text"],
+.login_page input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.login_page button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login_page button:hover {
+    background-color: #0056b3;
+}
+
+.login_page p {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login_page p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login_page p a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*register page styling*/
+.reg {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 160px;
+    margin-bottom: 200px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.reg h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.reg label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.reg input[type="text"],
+.reg input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.reg button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.reg button:hover {
+    background-color: #0056b3;
+}
+
+.reg p {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.reg p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.reg p a:hover {
+    text-decoration: underline;
+}

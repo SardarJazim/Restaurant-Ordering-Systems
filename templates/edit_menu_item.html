@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Menu Item</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <header class="top-banner">
+        <h1><a href="#">Edit Menu Item</a></h1>
+    </header>
+
+    <div class="container">
+        <h2>Edit Menu Item</h2>
+        <form action="/admin/edit_menu_item/{{ item_id }}" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ item.name }}" required><br>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" value="{{ item.description }}"><br>
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price" value="{{ item.price }}" required><br>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+    <footer class="end-banner">
+        <p>@RESTAURANT ORDERING SYSTEM 2024</p>
+    </footer>
+</body>
+</html>

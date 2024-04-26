@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <header class="top-banner">
+        <h1><a href="#">FOS</a></h1>
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+    </header>
+  <section class="opening-section">
+    <div class="login_page">
+        <h2 style="color: black;">Login</h2>
+        <form action="/login" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>{{ error }}</p> 
+        <p>Don't have an account? <a href="register.html">Register here</a>.</p>
+    </div>
+  </section>
+
+    <footer class="end-banner">
+        <p>@RESTAURANT ORDERING SYSTEM 2024</p>
+    </footer>
+</body>
+</html>
